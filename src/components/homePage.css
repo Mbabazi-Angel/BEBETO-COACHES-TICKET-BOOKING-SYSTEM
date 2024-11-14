@@ -1,0 +1,75 @@
+.home-page {
+    text-align: center;
+}
+
+/* Ensure no margins/padding for body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Apply background image to the whole page */
+.home-page {
+    background-image: url('../assets/bebeto_bus.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensures background covers the entire viewport */
+    color: white;
+}
+
+/* Header section */
+.header {
+    height: 150px; /* Adjust header height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent overlay */
+}
+
+/* Logo styles */
+.header .logo img {
+    height: 100px; /* Adjust logo size */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #ff9900; /* Color change on hover */
+}
+
+/* Hero section styles */
+.hero-section {
+    padding: 50px 20px;
+    height: 500px; /* Adjust this to the desired height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: darken the section */
+    text-align: center;
+}
+
+/* Features section styles */
+.features {
+    padding: 20px;
+    background-color: #f1f1f1; /* Optional: background for features section */
+    text-align: center;
+}
+
+
+
+.features {
+    padding: 20px;
+}
