@@ -3,7 +3,7 @@ import "../components/aboutUs.css";
 import image from "../assets/bebeto_bus.jpg"
 import images from "../assets/buss.webp"
 import logo from "../assets/bebeto_logo.png"
-import { Link } from "react-router-dom"; 
+
 
 const AboutUs = () => {
   return (
