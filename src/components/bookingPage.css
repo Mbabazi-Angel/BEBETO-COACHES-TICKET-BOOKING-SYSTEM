@@ -1,0 +1,190 @@
+/* General Styles for the Booking Page */
+.booking-page {
+  background: linear-gradient(135deg, #1a1e24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+   /* Adjust padding to avoid navbar overlap */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Navigation Bar - Matching PlusSave style */
+.booking-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.832); /* Semi-transparent white like PlusSave */
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 12px 40px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  border-radius: 12px; /* More rounded like PlusSave */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.logo img {
+  height: 35px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px; /* Wider spacing like PlusSave */
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: white; /* Gray color like PlusSave */
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-links li a.active {
+  color: orange; /* Green color for active state */
+}
+
+.nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: orange;
+  border-radius: 1px;
+}
+
+.nav-links li a:hover {
+  color: orange;
+}
+
+.booking-btn {
+ background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+  background: linear-gradient(135deg, #f57c00, #e65100);
+}
+
+/* Booking Form Container */
+.booking-container {
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+  background: rgba(128, 128, 128, 0.508);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+  position: relative;
+  z-index: 1; /* Ensure it stays above the background image */
+}
+
+.booking-container h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Style input fields */
+.input-field, .message-box {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Adjust textarea size */
+.message-box {
+  height: 120px;
+  resize: none;
+}
+
+.seats-dropdown {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.seats-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.seats-dropdown li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.seats-dropdown button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.seats-dropdown button:hover {
+  background-color: #218838;
+}
+
+
+/* Style send button */
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  background: orange;
+  border: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.send-btn:hover {
+  background: darkorange;
+}

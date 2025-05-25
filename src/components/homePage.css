@@ -1,75 +1,356 @@
-.home-page {
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Ensure no margins/padding for body and html */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Apply background image to the whole page */
-.home-page {
-    background-image: url('../assets/bebeto_bus.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Ensures background covers the entire viewport */
-    color: white;
+/* Navigation Bar - Matching PlusSave style */
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.832); /* Semi-transparent white like PlusSave */
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 12px 40px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  border-radius: 12px; /* More rounded like PlusSave */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
 }
 
-/* Header section */
-.header {
-    height: 150px; /* Adjust header height */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent overlay */
+.logo img {
+  height: 35px;
+  width: auto;
 }
 
-/* Logo styles */
-.header .logo img {
-    height: 100px; /* Adjust logo size */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px; /* Wider spacing like PlusSave */
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
-/* Navbar styles */
-.navbar {
-    display: flex;
-    gap: 20px;
+.nav-links li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: white; /* Gray color like PlusSave */
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
+.nav-links li a.active {
+  color: orange; /* orange color for active state */
 }
 
-.navbar a:hover {
-    color: #ff9900; /* Color change on hover */
+.nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: orange;
+  border-radius: 1px;
 }
 
-/* Hero section styles */
+.nav-links li a:hover {
+  color: orange;
+}
+
+.home-booking-btn {
+ background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.home-booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+  background: linear-gradient(135deg, #f57c00, #e65100);
+}
+
+/* Hero Section */
 .hero-section {
-    padding: 50px 20px;
-    height: 500px; /* Adjust this to the desired height */
-    display: flex;
+  position: relative;
+  background-image: url('../assets/bebeto_bus.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 50px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust 0.5 for lighter/darker */
+  z-index: 0;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content-left {
+  text-align: left;
+  color: white;
+  z-index: 1;
+}
+
+.hero-content-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.book-us-btn {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.book-us-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+  background: linear-gradient(135deg, #f57c00, #e65100);
+}
+
+/* Combined About Us and Why Choose Us Section */
+.about-why-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #829dc8 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-us, .why-choose-us {
+  margin-bottom: 60px;
+}
+
+.about-us h2, .why-choose-us h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.about-us p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #4a5568;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us-btn {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.about-us-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  padding: 30px 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.feature p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* Footer Section */
+.home-footer {
+  background: linear-gradient(135deg, #1a202c, #2d3748);
+  color: white;
+  padding: 50px 50px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #ff9800;
+}
+
+.footer-contact {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-info h3, .socials h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.contact-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e0;
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #cbd5e0;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.social-icons a:hover {
+  color: #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #4a5568;
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%;
+    padding: 10px 20px;
+    top: 10px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+
+  .hero-content-left h1 {
+    font-size: 36px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contact {
     justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.4); /* Optional: darken the section */
-    text-align: center;
-}
-
-/* Features section styles */
-.features {
-    padding: 20px;
-    background-color: #f1f1f1; /* Optional: background for features section */
-    text-align: center;
-}
-
-
-
-.features {
-    padding: 20px;
+  }
 }

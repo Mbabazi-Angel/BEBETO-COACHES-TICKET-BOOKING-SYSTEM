@@ -1,0 +1,223 @@
+/* Background and Page Styling */
+.about-page {
+  background: linear-gradient(135deg, #1a1e24);
+  color: black; /* black text */
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif Arial, sans-serif sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Navigation Bar - Matching PlusSave style */
+.about-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.571); 
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 12px 40px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  border-radius: 12px; /* More rounded like PlusSave */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.logo img {
+  height: 35px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px; /* Wider spacing like PlusSave */
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: white; /* Gray color like PlusSave */
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-links li a.active {
+  color: orange; /* Green color for active state */
+}
+
+.nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: orange;
+  border-radius: 1px;
+}
+
+.nav-links li a:hover {
+  color: orange;
+}
+
+.booking-btn {
+ background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+  background: linear-gradient(135deg, #f57c00, #e65100);
+}
+
+/* About Container */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+/* About Sections */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Images */
+  .about-image {
+    flex: 1;
+    size: 500PX;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+  }
+
+.about-text {
+  flex: 1;
+}
+
+
+/* Text Styling */
+.about-text h2 {
+  font-size: 35px; /* Larger title */
+  color: #f4a261;
+}
+ .about-container h3{
+  color: #f4a261;
+ }
+
+.about-text p {
+  font-size: 19px; /* Bigger paragraph text */
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 90%;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: black;
+  color: white;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-info, .socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+  margin-bottom: 10px; /* Space between title and contact details */
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 5px; /* Space between each contact detail */
+}
+
+.socials {
+  flex: 1;
+}
+
+.socials h3 {
+  margin-bottom: 10px; /* Space between "SOCIALS" and icons */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+
+.social-icons a {
+  color: white;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: orange;
+}
+
+
+
+  

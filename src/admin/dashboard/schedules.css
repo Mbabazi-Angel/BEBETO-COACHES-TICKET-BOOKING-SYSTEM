@@ -1,0 +1,22 @@
+.bus-form input{
+    width: 100%;
+  }
+
+  .bus-form th{
+    width: 5%;
+  }
+
+  .hide-btn{
+    background-color: black;
+  }
+
+  .delete-btn{
+    background-color: red;
+  }
+
+  .top-inputs, .bottom-inputs{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
