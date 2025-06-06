@@ -1,6 +1,6 @@
 /* General Styles for the Booking Page */
 .booking-page {
-  background: linear-gradient(135deg, #1a1e24);
+  background: linear-gradient(135deg, #1a1e24, #2c2f35);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -138,6 +138,7 @@ const BookingPage = () => {
       </div>
       <br></br><br></br><br></br><br></br>
       <div className="booking-container">
+        <br></br><br></br><br></br>
         <h2>Book Your Ticket</h2>
         <form className="booking-form" onSubmit={handleConfirmBooking}>
           <input type="text" placeholder="Name" required value={name} onChange={(e) => setName(e.target.value)} className="input-field" />
@@ -216,4 +217,8 @@ const BookingPage = () => {
 };
 
 export default BookingPage;
+
+
+
+
 
