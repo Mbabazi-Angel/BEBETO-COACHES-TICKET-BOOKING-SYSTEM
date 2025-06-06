@@ -11,7 +11,7 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   // Define the API base URL as a relative path
-  const API_BASE_URL = "/api";
+  const API_BASE_URL = "http://localhost:8000";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

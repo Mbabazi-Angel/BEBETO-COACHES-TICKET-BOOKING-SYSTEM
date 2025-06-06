@@ -159,18 +159,6 @@ body {
     transform: scale(1.05);
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .service-section {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .service-text {
-      text-align: center;
-    }
-  }
-
   /* Footer Styles */
   .footer {
     display: flex;
@@ -189,7 +177,7 @@ body {
   }
   
   .contact-info h3 {
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 10px; /* Space between title and contact details */
   }
   
@@ -203,7 +191,7 @@ body {
   }
   
   .socials h3 {
-    margin-bottom: 10px; /* Space between "SOCIALS" and icons */
+    margin-bottom: 0px; /* Space between "SOCIALS" and icons */
   }
   
   .social-icons {
@@ -223,3 +211,35 @@ body {
     color: orange;
   }
   
+
+  @media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .contact-info,
+  .socials {
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .services-navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .booking-btn {
+    margin-top: 10px;
+  }
+}

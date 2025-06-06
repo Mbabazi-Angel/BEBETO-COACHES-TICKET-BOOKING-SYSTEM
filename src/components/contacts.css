@@ -1,5 +1,4 @@
 /* General Styles */
-/* General Styles */
 .contact-page {
   margin: 0;
   padding: 0;
@@ -266,4 +265,48 @@ body {
   border-top: 1px solid #4a5568;
   font-size: 14px;
   color: #a0aec0;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contact-form-section {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .contact-navbar {
+    padding: 10px 20px;
+    top: 10px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }

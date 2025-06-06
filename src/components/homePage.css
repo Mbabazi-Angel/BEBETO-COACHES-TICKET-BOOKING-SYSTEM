@@ -240,85 +240,82 @@ body {
 /* Footer Section */
 .home-footer {
   background: linear-gradient(135deg, #1a202c, #2d3748);
-  color: white;
-  padding: 50px 50px 30px;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center; /* Optional: distributes items evenly */
+  gap: 60px;
   flex-wrap: wrap;
-  gap: 40px;
+  max-width: 1200px; /* Set max width */
+  margin: 0 auto;     /* Center horizontally */
 }
 
 .footer-logo img {
-  height: 50px;
-  width: auto;
+  width: 150px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer-links {
+.footer-links,
+.footer-contact,
+.socials {
   display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.socials h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #f5f5f5;
 }
 
 .footer-links a {
-  color: #cbd5e0;
   text-decoration: none;
-  font-size: 15px;
+  color: #ccc;
+  margin: 5px 0;
   transition: color 0.3s ease;
-  font-weight: 500;
 }
 
 .footer-links a:hover {
-  color: #ff9800;
-}
-
-.footer-contact {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.contact-info h3, .socials h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: white;
-  font-weight: 600;
-}
-
-.contact-info p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #cbd5e0;
-  margin-bottom: 8px;
+  color: orange;
 }
 
 .social-icons {
-  display: flex;
-  gap: 15px;
+  margin-top: 10px;
 }
 
 .social-icons a {
-  color: #cbd5e0;
-  font-size: 24px;
-  transition: all 0.3s ease;
-  padding: 8px;
-  border-radius: 8px;
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #ff9800;
-  background: rgba(255, 152, 0, 0.1);
+  color: orange;
 }
 
 .footer-bottom {
-  width: 100%;
   text-align: center;
   margin-top: 30px;
+  border-top: 1px solid #444;
   padding-top: 20px;
-  border-top: 1px solid #4a5568;
   font-size: 14px;
-  color: #a0aec0;
+  color: #aaa;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -350,6 +347,48 @@ body {
     text-align: center;
   }
 
+  .footer-contact {
+    justify-content: center;
+  }
+}
+
+/* 🎯 Media Query for Tablets and Small Laptops (<= 768px) */
+@media (max-width: 768px) {
+  /* ✅ Navbar becomes more compact and adapts padding */
+  .navbar {
+    width: 95%;
+    padding: 10px 20px;
+    top: 10px;
+  }
+
+  /* ✅ Reduce spacing between navigation links */
+  .nav-links {
+    gap: 20px;
+  }
+
+  /* ✅ Smaller font size for nav links */
+  .nav-links li a {
+    font-size: 14px;
+  }
+
+  /* ✅ Smaller heading in hero section for smaller screens */
+  .hero-content-left h1 {
+    font-size: 36px;
+  }
+
+  /* ✅ Stack features vertically on small screens */
+  .features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* ✅ Stack footer content vertically */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* ✅ Center footer contact section */
   .footer-contact {
     justify-content: center;
   }

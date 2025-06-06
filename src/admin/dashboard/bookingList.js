@@ -8,7 +8,7 @@ const BookingList = () => {
     const [bookings, setBookings] = useState([]);
 
     // Define the API base URL as a relative path
-    const API_BASE_URL = "http://mbabaziangel-001-site1.ktempurl.com/api";
+    const API_BASE_URL = "http://localhost:8000";
 
     const fetchAllBookings = async () => {
         try {
