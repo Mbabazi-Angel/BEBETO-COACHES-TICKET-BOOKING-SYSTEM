@@ -1,6 +1,6 @@
 /* Background and Page Styling */
 .about-page {
-  background: linear-gradient(135deg, #1a1e24);
+  background: linear-gradient(135deg, #1a1e24, #2c2f35);
   color: black; /* black text */
   min-height: 100vh;
   padding: 0;

@@ -138,7 +138,6 @@ const BookingPage = () => {
       </div>
       <br></br><br></br><br></br><br></br>
       <div className="booking-container">
-      
         <h2>Book Your Ticket</h2>
         <form className="booking-form" onSubmit={handleConfirmBooking}>
           <input type="text" placeholder="Name" required value={name} onChange={(e) => setName(e.target.value)} className="input-field" />

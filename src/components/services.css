@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif Arial, sans-serif sans-serif;
-    background: linear-gradient(135deg, #1a1e24);
+    background: linear-gradient(135deg, #1a1e24, #2c2f35);
     color: white;
   }
   
@@ -212,34 +212,47 @@ body {
   }
   
 
-  @media (max-width: 768px) {
-  .footer {
+
+@media (max-width: 768px) {
+  .contact-info {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     gap: 30px;
   }
 
-  .contact-info,
-  .socials {
+  .contact-form-section {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .services-navbar {
+    padding: 10px 20px;
+    top: 10px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
+  }
+
+  .home-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 
   .social-icons {
     justify-content: center;
-  }
-
-  .services-navbar {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .booking-btn {
-    margin-top: 10px;
   }
 }

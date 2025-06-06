@@ -189,67 +189,32 @@ body {
   background: darkorange;
 }
 
-/* 🎯 For screens smaller than tablets (768px and below) */
-@media (max-width: 768px) {
-  /* ✅ Stack navbar items vertically */
-  .booking-navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  /* ✅ Stack nav links vertically with spacing */
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* ✅ Adjust booking container spacing */
-  .booking-container {
-    padding: 20px;
-    margin: 10px;
-  }
-
-  /* ✅ Stack seat rows and center them */
-  .seat-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* ✅ Adjust logo size */
-  .logo img {
-    width: 100px;
-    margin-bottom: 10px;
-  }
-
-  /* ✅ Smaller buttons for better fit */
-  .send-btn {
-    font-size: 14px;
-    padding: 8px;
-  }
-}
 
 /* 🎯 For small phones (480px and below) */
-@media (max-width: 480px) {
-  /* ✅ Make form container smaller */
-  .booking-container {
-    padding: 15px;
+@media (max-width: 768px) {
+  /* Booking Navbar */
+  .booking-navbar {
+    padding: 10px 20px;
+    top: 10px;
   }
 
-  /* ✅ Smaller inputs and text areas */
+  .nav-links {
+    gap: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  .booking-container {
+    width: 90%;
+    padding: 20px;
+  }
+
   .input-field,
   .message-box {
     font-size: 13px;
     padding: 8px;
   }
 
-  /* ✅ Smaller button */
-  .send-btn {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-
-  /* ✅ Smaller nav link text */
-  .nav-links li a {
-    font-size: 14px;
-  }
 }
+
